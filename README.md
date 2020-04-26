@@ -9,7 +9,7 @@ The PicoBrew's built-in Ardunio uses an unencrypted HTTP communication protocol.
 
 # Installation
 
-- Install Python 3.7
+- Install Python 3.6 (or higher)
 
 ```
 // Install Python requirements
