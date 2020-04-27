@@ -2,7 +2,7 @@
 This is a reverse engineered server for the proprietary PicoBrew protocol. The [PicoBrew Zymatic](http://www.picobrew.com/) is a machine to homebrew beer. Since their Firmware is not yet open sourced (they intend to release it at some point) it is missing an offline mode this server can be used as an alternative.
 
 # HTTP API
-The PicoBrew's built-in Ardunio uses an unencrypted HTTP communication protocol. All request are `GET` requests and are not authenticated. The following documentation is based on Firmware 1.18.
+The PicoBrew's built-in Ardunio uses an unencrypted HTTP communication protocol. All request are `GET` requests and are not authenticated. The following documentation is based on Firmware 1.1.14
 
 [API Docs on Postman](https://documenter.getpostman.com/view/234053/Szf54VEX?version=93783194-dcee-4bb2-8f19-f25ab6c6d411)
 [API Docs on GitHub](https://github.com/hotzenklotz/picobrew-server/wiki/PicoBrew-API)
@@ -18,6 +18,7 @@ pip install -r requirements.txt
 // Start the server
 sudo python server.py
 ```
+The server defaults to listening on port 5000. The Zymatic will attempt to communicate on port 80. When you're done setting this up and testing/uploading your recipes, you can edit server.py to change port 5000 to port 80 and work on getting DNS spoofing working.
 
 - Connect the PicoBrew machine to your computer and enable DNS spoofing. Re-route `www.picobrew.com` to your computer.
 [More Details](https://github.com/hotzenklotz/picobrew-server/wiki/Install)
